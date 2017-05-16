@@ -20,13 +20,21 @@ public class Button extends JButton implements ActionListener{
 	
 		switch(TicTacToe.turn)
 		{
-		case 0:
+		case 0: //starts at 0
+			Victory.checkWin(); //inbetween state - checks if someone has won
+			TicTacToe.turn ++;
+			break;
+		case 1: //turn is 1
 			setIcon(X);
 			TicTacToe.turn ++;
 			break;
-		case 1:
+		case 2: //turn is 2
+			Victory.checkWin(); //inbetween state - checks if someone has won
+			TicTacToe.turn ++;
+			break;
+		case 3: //turn is 3 and then reduces back to case 0
 			setIcon(O);
-			TicTacToe.turn --;
+			TicTacToe.turn =- 3;
 			break;
 		}
 		

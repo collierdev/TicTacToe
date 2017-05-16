@@ -46,6 +46,17 @@ public class TicTacToe extends JFrame {
 		add(panel);
 
 		setVisible(true);
+		
+		boolean gameWon = false; //default state of game - NOT WON
+		
+		/* maybe buttons should be numbered? or rows and columns? 
+		 *Columns: 1  2  3
+		 *Row 1:  [1][2][3]
+		 *Row 2:  [1][2][3]
+		 *Row 3:  [1][2][3] 
+		 *
+		 *That way checking for victory conditions will be easy.. or even possible.
+	*/
 	}
 }
 
