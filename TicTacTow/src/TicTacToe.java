@@ -3,22 +3,29 @@ import javax.swing.JFrame;
 import java.awt.GridLayout;
 
 public class TicTacToe extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JPanel panel = new JPanel();
+	
+	//turn counter called in the button to switch between x and o
+	public static int turn = 0;
 	
 	//the brackets are creating an array
 	//we need nine buttons so a total of 9 slots for buttons in the array
-	
-	Button button[] = new Button[9];
+	Button[] button = new Button[9];
 	
 	public static void main(String[] args) {
 		new TicTacToe();
+		
 	}
 	
 	public TicTacToe()
 	{
 		//making it so each square is 600x600
 		//can be resized, maybe change that?
-		//make the prpgram stop when closed
+		//make the program stop when closed
 		
 		setSize(1000,1000);
 		setResizable(false);
@@ -41,3 +48,4 @@ public class TicTacToe extends JFrame {
 		setVisible(true);
 	}
 }
+
