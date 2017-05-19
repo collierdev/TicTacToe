@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Button extends JButton implements ActionListener{
 
-	//The two options asside from empty
+	//The two options aside from empty
 	ImageIcon  X,O;
 
 	public Button()
@@ -17,24 +17,21 @@ public class Button extends JButton implements ActionListener{
 	}
 	public void actionPerformed(ActionEvent event)
 	{
-	
+		
+		
 		switch(TicTacToe.turn)
 		{
-		case 0: //starts at 0
-			Victory.checkWin(); //inbetween state - checks if someone has won
-			TicTacToe.turn ++;
-			break;
-		case 1: //turn is 1
+		case 0: //turn is 0
 			setIcon(X);
-			TicTacToe.turn ++;
+			TicTacToe.turn++;
+			//Victory.checkWin(); //inbetween state - checks if someone has won
+			removeActionListener(this);
 			break;
-		case 2: //turn is 2
-			Victory.checkWin(); //inbetween state - checks if someone has won
-			TicTacToe.turn ++;
-			break;
-		case 3: //turn is 3 and then reduces back to case 0
+
+		case 1: //turn is 1 and then reduces back to case 0
 			setIcon(O);
-			TicTacToe.turn =- 3;
+			TicTacToe.turn--;
+			removeActionListener(this);
 			break;
 		}
 		
